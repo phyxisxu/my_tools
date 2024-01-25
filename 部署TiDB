@@ -10,7 +10,6 @@ bash
    tiup cluster
 编写拓扑文件
 编写一个部署拓扑文件，定义部署的机器、组件等信息:
-
 # tidb-cluster.yaml  
 global:
   user: "tidb"
@@ -28,6 +27,10 @@ monitoring_servers:
   - host: 127.0.0.1
 grafana_servers:
   - host: 127.0.0.1
+
+tidb-cluster.yaml是您需要手动创建的一个文件，该文件描述了要如何在服务器上部署 TiDB 集群具体的配置信息。你可以在你的任意喜欢的目录下创建，例如在你的用户主目录。从你的终端中输入下面的命令：
+plaintext
+nano ~/tidb-cluster.yaml
   
   
 注意替换掉配置文件中的 IP 地址（10.0.1.1）为你 machines 的 IP 地址。
